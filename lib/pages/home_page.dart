@@ -15,10 +15,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      // create: (context) => UserBloc(userRepository: userRepository),
+      create: (context) => UserBloc(userRepository: userRepository),
 
       //ВЫПОЛНИТЬ КАК ТОЛЬКО ЗАПУСТИТЬСЯ
-      create: (context) => UserBloc(userRepository: context.read<UserRepository>())..add(UserLoadEvent()),
+      // create: (context) => UserBloc(userRepository: context.read<UserRepository>())..add(UserLoadEvent()),
       child: Scaffold(
         backgroundColor: bg,
         appBar: AppBar(
